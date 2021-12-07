@@ -199,12 +199,12 @@ int main()
 	Shader lampShader("Shaders/lamp.vs", "Shaders/lamp.frag");
 	Shader SkyBoxshader("Shaders/SkyBox.vs", "Shaders/SkyBox.frag");
 
-	Model Casa((char*)"Models/MODELOS/WholeHouse.obj");
+	Model Casa((char*)"Models/House/House.obj");
 	Model Snowman((char*)"Models/Snowman/SnowmanT.obj");
 	Model Telephone((char*)"Models/MODELOS/Telephone.obj");
 	Model Suelo((char*)"Models/Snowman/SnowmanSueloT.obj");
-	/*Model PiernaDer((char*)"Models/Personaje/piernader.obj");
-	Model PiernaIzq((char*)"Models/Personaje/piernaizq.obj");
+	Model Escalera((char*)"Models/Stairs/Escaleras.obj");
+	/*Model PiernaIzq((char*)"Models/Personaje/piernaizq.obj");
 	Model Torso((char*)"Models/Personaje/torso.obj");
 	Model BrazoDer((char*)"Models/Personaje/brazoder.obj");
 	Model BrazoIzq((char*)"Models/Personaje/brazoizq.obj");
@@ -550,6 +550,12 @@ int main()
 		//model = glm::rotate(model, glm::radians(rot), glm::vec3(0.0f, 1.0f, 0.0));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		Suelo.Draw(lightingShader);
+		
+		model = glm::mat4(1);
+		//model = glm::translate(model,glm::vec3(posX,posY,posZ));
+		//model = glm::rotate(model, glm::radians(rot), glm::vec3(0.0f, 1.0f, 0.0));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		Escalera.Draw(lightingShader);
 
 		glBindVertexArray(0);
 
