@@ -205,8 +205,8 @@ int main()
 	Model Suelo((char*)"Models/Snowman/SnowmanSueloT.obj");
 	Model Escalera((char*)"Models/Stairs/Escaleras.obj");
 	Model Puerta1((char*)"Models/Puertas/Puerta1.obj");
-	/*Model Torso((char*)"Models/Personaje/torso.obj");
-	Model BrazoDer((char*)"Models/Personaje/brazoder.obj");
+	Model Puerta2((char*)"Models/Puertas/Puerta2.obj");
+	/*Model BrazoDer((char*)"Models/Personaje/brazoder.obj");
 	Model BrazoIzq((char*)"Models/Personaje/brazoizq.obj");
 	Model Cabeza((char*)"Models/Personaje/cabeza.obj");*/
 	// Build and compile our shader program
@@ -552,8 +552,8 @@ int main()
 		Suelo.Draw(lightingShader);
 		
 		model = glm::mat4(1);
-		//model = glm::translate(model,glm::vec3(posX,posY,posZ));
-		//model = glm::rotate(model, glm::radians(rot), glm::vec3(0.0f, 1.0f, 0.0));
+		model = glm::translate(model,glm::vec3(16.5f,11.0f,-19.0f));
+		model = glm::rotate(model, glm::radians(-90.0f), glm::vec3(0.0f, 1.0f, 0.0));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		Escalera.Draw(lightingShader);
 
@@ -562,6 +562,12 @@ int main()
 		//model = glm::rotate(model, glm::radians(rot), glm::vec3(0.0f, 1.0f, 0.0));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		Puerta1.Draw(lightingShader);
+
+		model = glm::mat4(1);
+		model = glm::translate(model, glm::vec3(0.0f, 1.0f, 0.0f));
+		//model = glm::rotate(model, glm::radians(rot), glm::vec3(0.0f, 1.0f, 0.0));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		Puerta2.Draw(lightingShader);
 
 		model = glm::mat4(1);
 		model = glm::translate(model, glm::vec3(0.0f, 1.0f, 0.0f));
