@@ -36,7 +36,7 @@ const GLuint WIDTH = 800, HEIGHT = 600;
 int SCREEN_WIDTH, SCREEN_HEIGHT;
 
 // Camera
-Camera  camera(glm::vec3(-100.0f, 2.0f, -45.0f));
+Camera  camera(glm::vec3(0.0f, 0.0f, 0.0f));
 GLfloat lastX = WIDTH / 2.0;
 GLfloat lastY = HEIGHT / 2.0;
 bool keys[1024];
@@ -200,10 +200,10 @@ int main()
 	Shader SkyBoxshader("Shaders/SkyBox.vs", "Shaders/SkyBox.frag");
 
 	Model Casa((char*)"Models/MODELOS/WholeHouse.obj");
-	Model Snowman((char*)"Models/MODELOS/Snowman.obj");
+	Model Snowman((char*)"Models/Snowman/SnowmanT.obj");
 	Model Telephone((char*)"Models/MODELOS/Telephone.obj");
-	/*Model BotaDer((char*)"Models/Personaje/bota.obj");
-	Model PiernaDer((char*)"Models/Personaje/piernader.obj");
+	Model Suelo((char*)"Models/Snowman/SnowmanSueloT.obj");
+	/*Model PiernaDer((char*)"Models/Personaje/piernader.obj");
 	Model PiernaIzq((char*)"Models/Personaje/piernaizq.obj");
 	Model Torso((char*)"Models/Personaje/torso.obj");
 	Model BrazoDer((char*)"Models/Personaje/brazoder.obj");
@@ -444,9 +444,9 @@ int main()
 		// == ==========================
 		// Directional light
 		glUniform3f(glGetUniformLocation(lightingShader.Program, "dirLight.direction"), -0.2f, -1.0f, -0.3f);
-		glUniform3f(glGetUniformLocation(lightingShader.Program, "dirLight.ambient"), 1.0f, 1.0f, 1.0f);
-		glUniform3f(glGetUniformLocation(lightingShader.Program, "dirLight.diffuse"), 0.8f, 0.8f, 0.8f);
-		glUniform3f(glGetUniformLocation(lightingShader.Program, "dirLight.specular"), 0.1f, 0.1f, 0.1f);
+		glUniform3f(glGetUniformLocation(lightingShader.Program, "dirLight.ambient"), 0.5f, 0.5f, 0.5f);
+		glUniform3f(glGetUniformLocation(lightingShader.Program, "dirLight.diffuse"), 0.3f, 0.3f, 0.3f);
+		glUniform3f(glGetUniformLocation(lightingShader.Program, "dirLight.specular"), 1.0f, 1.0f, 1.0f);
 
 
 		// Point light 1
@@ -545,6 +545,11 @@ int main()
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		Snowman.Draw(lightingShader);
 
+		model = glm::mat4(1);
+		//model = glm::translate(model,glm::vec3(posX,posY,posZ));
+		//model = glm::rotate(model, glm::radians(rot), glm::vec3(0.0f, 1.0f, 0.0));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		Suelo.Draw(lightingShader);
 
 		glBindVertexArray(0);
 
