@@ -1,9 +1,9 @@
 ﻿  PROYECTO.cpp
 C:\Users\Work\Documents\Escuela\11Semestre\Computación Grafica\Proyecto\Proyecto\Proyecto\Proyecto\PROYECTO.cpp(418,24): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-C:\Users\Work\Documents\Escuela\11Semestre\Computación Grafica\Proyecto\Proyecto\Proyecto\Proyecto\PROYECTO.cpp(726,11): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-C:\Users\Work\Documents\Escuela\11Semestre\Computación Grafica\Proyecto\Proyecto\Proyecto\Proyecto\PROYECTO.cpp(727,11): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-C:\Users\Work\Documents\Escuela\11Semestre\Computación Grafica\Proyecto\Proyecto\Proyecto\Proyecto\PROYECTO.cpp(731,18): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-C:\Users\Work\Documents\Escuela\11Semestre\Computación Grafica\Proyecto\Proyecto\Proyecto\Proyecto\PROYECTO.cpp(732,18): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-C:\Users\Work\Documents\Escuela\11Semestre\Computación Grafica\Proyecto\Proyecto\Proyecto\Proyecto\PROYECTO.cpp(734,10): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-C:\Users\Work\Documents\Escuela\11Semestre\Computación Grafica\Proyecto\Proyecto\Proyecto\Proyecto\PROYECTO.cpp(735,10): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+C:\Users\Work\Documents\Escuela\11Semestre\Computación Grafica\Proyecto\Proyecto\Proyecto\Proyecto\PROYECTO.cpp(762,11): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+C:\Users\Work\Documents\Escuela\11Semestre\Computación Grafica\Proyecto\Proyecto\Proyecto\Proyecto\PROYECTO.cpp(763,11): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+C:\Users\Work\Documents\Escuela\11Semestre\Computación Grafica\Proyecto\Proyecto\Proyecto\Proyecto\PROYECTO.cpp(767,18): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+C:\Users\Work\Documents\Escuela\11Semestre\Computación Grafica\Proyecto\Proyecto\Proyecto\Proyecto\PROYECTO.cpp(768,18): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+C:\Users\Work\Documents\Escuela\11Semestre\Computación Grafica\Proyecto\Proyecto\Proyecto\Proyecto\PROYECTO.cpp(770,10): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+C:\Users\Work\Documents\Escuela\11Semestre\Computación Grafica\Proyecto\Proyecto\Proyecto\Proyecto\PROYECTO.cpp(771,10): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
   Proyecto.vcxproj -> C:\Users\Work\Documents\Escuela\11Semestre\Computación Grafica\Proyecto\Proyecto\Proyecto\Debug\Proyecto.exe
