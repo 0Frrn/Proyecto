@@ -206,9 +206,9 @@ int main()
 	Model Escalera((char*)"Models/Stairs/Escaleras.obj");
 	Model Puerta1((char*)"Models/Puertas/Puerta1.obj");
 	Model Puerta2((char*)"Models/Puertas/Puerta2.obj");
-	Model MesaCocina((char*)"Models/MesaCocina/MesaC.obj");
-	/*Model BrazoIzq((char*)"Models/Personaje/brazoizq.obj");
-	Model Cabeza((char*)"Models/Personaje/cabeza.obj");*/
+	Model Maceta((char*)"Models/Flowerpot/Flowerpot.obj");
+	Model Fridge1((char*)"Models/Fridge/FridgeCuerpo.obj");
+	/*Model Cabeza((char*)"Models/Personaje/cabeza.obj");*/
 	// Build and compile our shader program
 
 	//Inicialización de KeyFrames
@@ -399,12 +399,12 @@ int main()
 
 	// Load textures
 	vector<const GLchar*> faces;
-	faces.push_back("SkyBox/right.tga");
-	faces.push_back("SkyBox/left.tga");
-	faces.push_back("SkyBox/top.tga");
-	faces.push_back("SkyBox/bottom.tga");
-	faces.push_back("SkyBox/back.tga");
-	faces.push_back("SkyBox/front.tga");
+	faces.push_back("SkyBox/right.jpg");
+	faces.push_back("SkyBox/left.jpg");
+	faces.push_back("SkyBox/top.jpg");
+	faces.push_back("SkyBox/bottom.jpg");
+	faces.push_back("SkyBox/back.jpg");
+	faces.push_back("SkyBox/front.jpg");
 	
 	GLuint cubemapTexture = TextureLoading::LoadCubemap(faces);
 
@@ -576,10 +576,11 @@ int main()
 		Telephone.Draw(lightingShader);
 
 		model = glm::mat4(1);
-		//model = glm::translate(model, glm::vec3(0.0f, 1.0f, 0.0f));
+		model = glm::translate(model, glm::vec3(-4.5f,13.6f,-8.3f));
 		//model = glm::rotate(model, glm::radians(rot), glm::vec3(0.0f, 1.0f, 0.0));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-		MesaCocina.Draw(lightingShader);
+		Maceta.Draw(lightingShader);
+
 
 		glBindVertexArray(0);
 

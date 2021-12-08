@@ -380,7 +380,7 @@ illum 4
 Kd 0.00 0.00 0.00
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
-map_Kd -s_0.0666667_0.1_Empedrado.png
+map_Kd Empedrado.png
 Ni 1.00
 newmtl lambert6SG
 illum 4
@@ -394,7 +394,7 @@ illum 4
 Kd 0.00 0.00 0.00
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
-map_Kd -s_0.0666667_0.0666667_Tejado.png
+map_Kd Tejado.png
 Ni 1.00
 newmtl lambert8SG
 illum 4
@@ -470,7 +470,7 @@ illum 4
 Kd 0.00 0.00 0.00
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
-map_Kd -s_0.1_0.1_Tejado.png
+map_Kd Tejado.png
 Ni 1.00
 newmtl lambert25SG
 illum 4
