@@ -155,8 +155,8 @@ int main()
 	glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
 	glfwWindowHint(GLFW_RESIZABLE, GL_FALSE);*/
 
-	// Create a GLFWwindow object that we can use for GLFW's functions
-	GLFWwindow* window = glfwCreateWindow(WIDTH, HEIGHT, "Practica 11", nullptr, nullptr);
+	// Create a GLFWwindow object that we can use for GLFW's functionssss
+	GLFWwindow* window = glfwCreateWindow(WIDTH, HEIGHT, "Proyecto Fernando Jorge Romero", nullptr, nullptr);
 
 	if (nullptr == window)
 	{
@@ -207,8 +207,8 @@ int main()
 	Model Puerta1((char*)"Models/Puertas/Puerta1.obj");
 	Model Puerta2((char*)"Models/Puertas/Puerta2.obj");
 	Model Maceta((char*)"Models/Flowerpot/Flowerpot.obj");
-	Model Fridge1((char*)"Models/Fridge/FridgeCuerpo.obj");
-	/*Model Cabeza((char*)"Models/Personaje/cabeza.obj");*/
+	Model MesaC((char*)"Models/MesaCocina/MesaC.obj");
+	Model Fridge((char*)"Models/Fridge/Fridge.obj");
 	// Build and compile our shader program
 
 	//Inicialización de KeyFrames
@@ -580,6 +580,18 @@ int main()
 		//model = glm::rotate(model, glm::radians(rot), glm::vec3(0.0f, 1.0f, 0.0));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		Maceta.Draw(lightingShader);
+
+		model = glm::mat4(1);
+		model = glm::translate(model, glm::vec3(-9.0f, 11.0f, -19.0f));
+		//model = glm::rotate(model, glm::radians(rot), glm::vec3(0.0f, 1.0f, 0.0));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		MesaC.Draw(lightingShader);
+
+		model = glm::mat4(1);
+		model = glm::translate(model, glm::vec3(-4.8f, 11.0f, -22.0f));
+		model = glm::rotate(model, glm::radians(-90.0f), glm::vec3(0.0f, 1.0f, 0.0));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		Fridge.Draw(lightingShader);
 
 
 		glBindVertexArray(0);
